@@ -12,7 +12,7 @@ project_id = os.getenv('PROJECT_ID')
 rf = Roboflow(api_key=api_key)
 project = rf.workspace().project(project_id)
 print(project)
-model = project.version(1).model
+model = project.version(4).model
 print(model)
 
 model.predict("/Users/amit/Desktop/AadharCode/cv/barRoboFlow/images/ss1.png", confidence=20, overlap=10).save("/Users/amit/Desktop/AadharCode/cv/barRoboFlow/newImages/prediction.jpg")
